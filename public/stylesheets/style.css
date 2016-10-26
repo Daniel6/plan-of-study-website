@@ -1,0 +1,13 @@
+.class-card {
+	width: 512px;
+}
+
+.class-list {
+	
+}
+
+.class-list > li {
+	border-bottom: #ccc;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}

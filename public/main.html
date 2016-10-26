@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PYPS</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue-red.min.css" />
+        <link rel="stylesheet" href="./stylesheets/style.css" />
+        
+        <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+        <script type="text/javascript" src="scripts/main.js"></script>  
+    </head>
+    <body>
+        <!-- Header -->
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <span class="mdl-layout-title">Plan of Study Planner</span>
+                </div>
+            </header>
+            <main class="mdl-layout__content">
+                <div class="page-content">
+                    <div id="wrapper" class="mdl-grid">
+                        <!-- Available Class Listing -->
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <h4 style="text-align: center;">Available Classes</h4>
+                            <hr>
+                            <ul class="mdl-list class-list">
+                                <!-- Repeat these for every availabel class -->
+                                <li class="mdl-list__item mdl-list__item--three-line">
+                                    <span class="mdl-list__item-primary-content">
+                                        <i class="material-icons mdl-list__item-avatar mdl-badge mdl-badge--overlap" data-badge="1">class</i>
+                                        <span>Class Name</span>
+                                        <span class="mdl-list__item-text-body">
+                                            class meeting times, other useful info
+                                        </span>
+                                    </span>
+                                    <span class="mdl-list__item-secondary-content">
+                                        <a class="mdl-list__item-secondary-action mdl-button mdl-js-button mdl-button--icon mdl-button--colored" href="#">
+                                            <i class="material-icons">playlist_add</i>
+                                        </a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Planned Class Listing -->
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <h4 style="text-align: center;">Planned Classes</h4>
+                            <hr>
+
+                        </div>
+
+                        <!-- Credit Breakdown -->
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <h4 style="text-align: center;">Progress Towards Major</h4>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
