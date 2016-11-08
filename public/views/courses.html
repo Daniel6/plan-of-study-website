@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PYPS</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue-red.min.css" />
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+
+    <script type="text/javascript" src="../scripts/jquery-2.2.0.min.js"></script> 
+    <script type="text/javascript" src="../scripts/angular.min.js"></script>  
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script type="text/javascript" src="../scripts/courses.js"></script>
+  </head>
+
+  <body ng-app="pypsApp" class="flat-grey-back">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Plan of Study Planner</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <div id="wrapper" class="mdl-grid" ng-controller="CoursesController">
+            <div class="mdl-cell mdl-cell--3-col"></div>
+
+              <div class="mdl-cell mdl-cell--6-col">
+                <div class="major-width-card mdl-card mdl-shadow--2dp">
+                  <div class="mdl-card__supporting-text">
+                    <h5>Choose at least 4 of the Following Classes</h5>
+                    <hr>
+                    <ul id="availableClassList" class="mdl-list class-list">
+                      <li class="mdl-list__item mdl-list__item--three-line" ng-repeat="classObj in availableClasses">
+                        <span class="mdl-list__item-primary-content">
+                          <i class="material-icons mdl-list__item-avatar">class</i>
+                          <span>{{classObj.name}}</span>
+                          <span class="mdl-list__item-text-body">
+                            {{classObj.desc}}
+                          </span>
+                        </span>
+                        <span class="mdl-list__item-secondary-content">
+                          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                            <input type="checkbox" class="mdl-checkbox__input">
+                          </label>
+                        </span>
+                     </li>
+                  </ul>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <button class="right-floated mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                    Next
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

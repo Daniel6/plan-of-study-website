@@ -6,8 +6,24 @@
 	
 }
 
+.right-floated {
+  float: right;
+}
+
 .class-list > li {
 	border-bottom: #ccc;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
+}
+
+.mdl-card__title > h5 {
+	margin-top: 0px;
+}
+
+.major-width-card {
+	width: 100%;
+}
+
+.flat-grey-back {
+	background-color: #FAFAFA;
 }

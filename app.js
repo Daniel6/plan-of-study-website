@@ -4,7 +4,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var index = require('./routes/index');
+var router = require('./routes/router');
 var wiki = require('./routes/wiki');
 var app = express();
 
@@ -14,13 +14,8 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get('/', index.home);
-app.get('/pages', wiki.getpages);
-app.get('/pages/byid/:id', wiki.getcontent);
-app.post('/pages/new', wiki.addpage);
-app.delete('/pages/byid/:id/delete', wiki.deletepage);
-
-
+app.get('/', router.home);
+app.get('/courses', router.courses);
 
 var PORT = process.env.PORT || 3000;
 
