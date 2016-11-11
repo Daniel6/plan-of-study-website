@@ -3,29 +3,27 @@
 }
 
 .class-list {
-	
+	margin-top: 0px;
+  padding-top: 0px;
 }
 
-.right-floated {
-  float: right;
-}
 
 .class-list > li {
-	border-bottom: #ccc;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
+  border-bottom: #ccc;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 }
 
 .mdl-card__title > h5 {
-	margin-top: 0px;
+  margin-top: 0px;
 }
 
 .major-width-card {
-	width: 100%;
+  width: 100%;
 }
 
 .flat-grey-back {
-	background-color: #FAFAFA;
+  background-color: #FAFAFA;
 }
 
 .summary-header {
@@ -40,4 +38,12 @@
   line-height: 20px;
   padding-left: 5px;
   padding-right: 5px;
+}
+
+hr {
+  margin-bottom: 0px;
+}
+
+.right-floated {
+  float: right;
 }
