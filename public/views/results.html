@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PYPS</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue-red.min.css" />
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+
+    <script type="text/javascript" src="../scripts/jquery-2.2.0.min.js"></script> 
+    <script type="text/javascript" src="../scripts/angular.min.js"></script>  
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script type="text/javascript" src="../scripts/results.js"></script>
+  </head>
+
+  <body ng-app="pypsApp" class="flat-grey-back">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Plan of Study Planner</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <div id="wrapper" class="mdl-grid" ng-controller="ResultsController">
+            <div class="mdl-cell mdl-cell--12-col">
+              <h4>Summary</h4>
+              <p>Listed below are your selected classes by category. You can edit your selections by pressing the 'edit' button at the top of each category.</p>
+            </div>
+
+            <div class="mdl-cell mdl-cell--3-col">
+              <h5 class="summary-header">Math</h5>
+              <button class="summary-header--button mdl-button mdl-js-button mdl-button--primary">
+                edit
+              </button>
+              <hr>
+              <ul class="mdl-list class-list">
+                <li class="mdl-list__item mdl-list__item--three-line" ng-repeat="classObj in chosenMathClasses">
+                  <span class="mdl-list__item-primary-content">
+                    <i class="material-icons mdl-list__item-avatar">class</i>
+                    <span>{{classObj.name}}</span>
+                    <span class="mdl-list__item-text-body">
+                      {{classObj.desc}}
+                    </span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mdl-cell mdl-cell--3-col">
+              <h5 class="summary-header">Design Depth</h5>
+              <button class="summary-header--button mdl-button mdl-js-button mdl-button--primary">
+                edit
+              </button>
+              <hr>
+              <ul class="mdl-list class-list">
+                <li class="mdl-list__item mdl-list__item--three-line" ng-repeat="classObj in chosenDDClasses">
+                  <span class="mdl-list__item-primary-content">
+                    <i class="material-icons mdl-list__item-avatar">class</i>
+                    <span>{{classObj.name}}</span>
+                    <span class="mdl-list__item-text-body">
+                      {{classObj.desc}}
+                    </span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mdl-cell mdl-cell--3-col">
+              <h5 class="summary-header">AHS</h5>
+              <button class="summary-header--button mdl-button mdl-js-button mdl-button--primary">
+                edit
+              </button>
+              <hr>
+              <ul class="mdl-list class-list">
+                <li class="mdl-list__item mdl-list__item--three-line" ng-repeat="classObj in chosenAHSClasses">
+                  <span class="mdl-list__item-primary-content">
+                    <i class="material-icons mdl-list__item-avatar">class</i>
+                    <span>{{classObj.name}}</span>
+                    <span class="mdl-list__item-text-body">
+                      {{classObj.desc}}
+                    </span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mdl-cell mdl-cell--3-col">
+              <h5 class="summary-header">Major</h5>
+              <button class="summary-header--button mdl-button mdl-js-button mdl-button--primary">
+                edit
+              </button>
+              <hr>
+              <ul class="mdl-list class-list">
+                <li class="mdl-list__item mdl-list__item--three-line" ng-repeat="classObj in chosenMajorClasses">
+                  <span class="mdl-list__item-primary-content">
+                    <i class="material-icons mdl-list__item-avatar">class</i>
+                    <span>{{classObj.name}}</span>
+                    <span class="mdl-list__item-text-body">
+                      {{classObj.desc}}
+                    </span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

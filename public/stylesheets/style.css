@@ -27,3 +27,17 @@
 .flat-grey-back {
 	background-color: #FAFAFA;
 }
+
+.summary-header {
+  display: inline;
+}
+
+.summary-header--button {
+  font-size: 12px;
+  height: 20px;
+  width: 38px;
+  min-width: 38px;
+  line-height: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
